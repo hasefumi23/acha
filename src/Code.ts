@@ -26,7 +26,13 @@ const createSignature = (item: any) => {
   ).replace(/=/g, "E").replace(/\+/g, "P");
 };
 
-const postSlack = (message: string) => {
+const postSlack = (hikkiItem: any) => {
+  const message = "Hi @hasefumi23\n" +
+    "I'll be on this TV program. Check it out!\n" +
+    `_${hikkiItem.date} (${hikkiItem.startTime} - ${hikkiItem.endTime})_\n` +
+    `*${hikkiItem.program}*\n` +
+    `${hikkiItem.note.replace(/<("[^"]*"|'[^']*'|[^'">])*>/g, "")}\n`;
+
   // TODO: ちゃんと画像とかを用意する
   const payload = {
     channel: "#hikki",
@@ -112,13 +118,8 @@ export default function main() {
   utadaTvItems.slice(index + 1).forEach((item: any) => {
     const signature = createSignature(item);
     sheet.appendRow([signature, item.date, item.startTime, item.endTime, item.media, item.program]);
-    const message = "Hi @hasefumi23\n" +
-      "I'll be on this TV program. Check it out!\n" +
-      `_${item.date} (${item.startTime} - ${item.endTime})_\n` +
-      `*${item.program}*\n` +
-      `${item.note.replace(/<("[^"]*"|'[^']*'|[^'">])*>/g, "")}\n`;
 
-    postSlack(message);
+    postSlack(item);
 
     if (!_.includes(EXCEPT_MEDIA, item.media)) {
       // 地デジで放送されているもののみカレンダーに登録したい
