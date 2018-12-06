@@ -80,9 +80,7 @@ const fetchUtadaJson = () => {
   const context = UrlFetchApp.fetch(HIKKI_URL).getContentText();
   // TODO: callbackをreplaceする処理を不要にできるはず
   const matched = context.match(/callback\(({.*})\)/) || "";
-  const json = JSON.parse(matched[1].toString());
-
-  return json;
+  return JSON.parse(matched[1].toString());
 };
 
 export default function main() {
