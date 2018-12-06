@@ -7,6 +7,7 @@ const CALENDAR_ID = "CALENDAR_ID";
 const SECRET = "my_secret";
 const EXCEPT_MEDIA = ["SPACE SHOWER TV Plus", "SPACE SHOWER TV", "MUSIC ON! TV", "MTV"];
 const REMINDER_BEFORE_TIME = 15;
+const PROP_NAMES_FOR_GSHEET = ["date", "startTime", "endTime", "media", "program"];
 
 /**
  * Google Spread Sheetの場合、セルにデータを保存する際に勝手にデータの方を推測されて変な型で保存されるので、signatureをとっておく。
@@ -85,11 +86,9 @@ const fetchUtadaJson = () => {
 
 export default function main() {
   const logTime = new Date();
-  Logger.log("[" + logTime.toString() + "]" + "START");
+  Logger.log(`[${logTime.toString()}]START`);
 
-  const utadaJson = fetchUtadaJson();
-  const utadaTvItems = utadaJson.items.tv.reverse();
-
+  const utadaTvItems = fetchUtadaJson().items.tv.reverse();
   const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("TV_INFO_LIST");
   const lastRow = sheet.getLastRow();
 
@@ -97,7 +96,8 @@ export default function main() {
   if (lastRow === 0) {
     utadaTvItems.forEach((item: any) => {
       const signature = createSignature(item);
-      sheet.appendRow([signature, item.date, item.startTime, item.endTime, item.media, item.program]);
+      const props = _.chain(item).pick(PROP_NAMES_FOR_GSHEET).values().value();
+      sheet.appendRow([signature, ...props]);
     });
 
     return;
@@ -105,7 +105,6 @@ export default function main() {
 
   // 最新の行のsignatureを取得する
   const lastSignature = sheet.getSheetValues(lastRow, 1, 1, 4)[0][0];
-
   // fetchしてきたデータの配列でsignatureが一致するindexを探す
   const index = _.findIndex(utadaTvItems, (item: any) => {
     const signature = createSignature(item);
@@ -115,8 +114,8 @@ export default function main() {
   // まだ取り込んでいないデータに対してのみ各処理を実施する
   utadaTvItems.slice(index + 1).forEach((item: any) => {
     const signature = createSignature(item);
-    sheet.appendRow([signature, item.date, item.startTime, item.endTime, item.media, item.program]);
-
+    const props = _.chain(item).pick(PROP_NAMES_FOR_GSHEET).values().value();
+    sheet.appendRow([signature, ...props]);
     postSlack(item);
 
     if (!_.includes(EXCEPT_MEDIA, item.media)) {
