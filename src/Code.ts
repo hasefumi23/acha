@@ -43,10 +43,19 @@ const postSlack = (message: string) => {
   UrlFetchApp.fetch(SLACK_POST_URL, options);
 };
 
-const createGcalendar = (title: string, media: string, date: string, startTime: string, endTime: string, description: string) => {
+const createGcalendar = (item: any) => {
+  const {
+    title,
+    media,
+    startTime,
+    endTime,
+    description,
+  } = item;
+  const date = item.date.replace(/\./g, "/");
+
   // TODO: 予定にラベルを付けたい
   const event = CalendarApp.getCalendarById(CALENDAR_ID);
-  const startAt = new Date(date + " " + startTime);
+  const startAt = new Date(`${date} ${startTime}`);
   let endAt = null;
   if (_.isEmpty(endTime)) {
     // たまにendTimeに値が入ってこない場合があるので手当する
@@ -56,7 +65,7 @@ const createGcalendar = (title: string, media: string, date: string, startTime: 
     endAt = new Date(date + " " + endTime);
   }
 
-  event.createEvent("[" + media + "]" + title, startAt, endAt, { description })
+  event.createEvent(`[${media}]${title}`, startAt, endAt, { description });
   event.createEvent(`[${media}]${title}`, startAt, endAt, { description })
     .addPopupReminder(REMINDER_BEFORE_TIME);
 };
@@ -113,7 +122,7 @@ export default function main() {
 
     if (!_.includes(EXCEPT_MEDIA, item.media)) {
       // 地デジで放送されているもののみカレンダーに登録したい
-      createGcalendar(item.program, item.media, item.date.replace(/\./g, "/"), item.startTime, item.endTime, item.note);
+      createGcalendar(item);
     }
   });
 }
