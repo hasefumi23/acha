@@ -32,14 +32,13 @@ const postSlack = (hikkiItem: any) => {
     .replace(/<("[^"]*"|'[^']*'|[^'">])*>/g, "") // htmlのタグを取り除く
     .replace(/(https?:\/\/.+)\//g, "$1"); // urlの末尾の"/"を取り除く
   const message = "Hi @hasefumi23\n" +
-    "I'll be on this TV program. Check it out!\n" +
+    "hikki will be on this TV program. Check it out!\n" +
     `_${hikkiItem.date} (${hikkiItem.startTime} - ${hikkiItem.endTime})_\n` +
     `*${hikkiItem.program}*\n` + note;
 
-  // TODO: ちゃんと画像とかを用意する
   const payload = {
     channel: "#hikki",
-    icon_emoji: ":ghost:",
+    icon_emoji: ":hikki:",
     text: message,
     unfurl_links: true,
     username: "hikki info",
