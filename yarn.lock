@@ -48,10 +48,10 @@
   resolved "https://registry.yarnpkg.com/@types/empower/-/empower-1.2.30.tgz#c7cfc14b3a61e54c74c674c1fbc91ba2df0d1392"
   integrity sha1-x8/BSzph5Ux0xnTB+8kbot8NE5I=
 
-"@types/google-apps-script@^0.0.39":
-  version "0.0.39"
-  resolved "https://registry.yarnpkg.com/@types/google-apps-script/-/google-apps-script-0.0.39.tgz#3db32978133e951555826848ce0b52b4212f80ac"
-  integrity sha512-43wZ0609addEIVO1UcMBTCc+Eo1c0RwXPHwxd8LniIDc9SQfmhfyahpOFPQqaUDe3oS+k3MqyGc1wdoSFx3ocA==
+"@types/google-apps-script@^0.0.62":
+  version "0.0.62"
+  resolved "https://registry.yarnpkg.com/@types/google-apps-script/-/google-apps-script-0.0.62.tgz#9f631be0c3edca807698f9430cf0c9b603fad6ad"
+  integrity sha512-KFgKLEBLKOgstMjDIEADFFBKkwywcRShtWpNMHADbWmYRLgRYvtVpNCkwcGi/QRua0iYUByLy3UBiazd57o8Dg==
 
 "@types/lodash@^4.14.118":
   version "4.14.118"
