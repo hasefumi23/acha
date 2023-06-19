@@ -3,9 +3,7 @@
 
 
 "@google/clasp@^2.0.0":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@google/clasp/-/clasp-2.0.1.tgz#c4d8b5cda40cec19860950b518886562b2612a9f"
-  integrity sha512-FdxpFk4/HfY+nGWcwZuUqThQOmVuhcckv7KOG7ePqJDjJRJlA+1+k9WwLp+CiNCb/OEkhmANORXePgF1mGEcyw==
+  version "2.4.2"
   dependencies:
     chalk "^2.4.1"
     cli-spinner "^0.2.8"
