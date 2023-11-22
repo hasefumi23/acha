@@ -43,10 +43,20 @@
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-0.7.0.tgz#9a06f4f137ee84d7df0460c1fdb1135ffa6c50fd"
   integrity sha512-ONhaKPIufzzrlNbqtWFFd+jlnemX6lJAgq9ZeiZtS7I1PIf/la7CW4m83rTXRnVnsMbW2k56pGYu7AUFJD9Pow==
 
+"@types/empower-core@*":
+  version "1.2.4"
+  resolved "https://registry.yarnpkg.com/@types/empower-core/-/empower-core-1.2.4.tgz#150468fdbfc2b7bb1a3032fbebe9efed4189a7ba"
+  integrity sha512-FUik+m3zw2W2PIJfx/+lfGhxmNHQY74A0KNCLN0SA8Olc+pRn9JrgZxbBkPLV4YS4/IBPNt6/Kmuc0VwLVSy8w==
+  dependencies:
+    "@types/node" "*"
+
 "@types/empower@*":
-  version "1.2.30"
-  resolved "https://registry.yarnpkg.com/@types/empower/-/empower-1.2.30.tgz#c7cfc14b3a61e54c74c674c1fbc91ba2df0d1392"
-  integrity sha1-x8/BSzph5Ux0xnTB+8kbot8NE5I=
+  version "1.2.35"
+  resolved "https://registry.yarnpkg.com/@types/empower/-/empower-1.2.35.tgz#b177fda3f611abfb181f8ebea29d201b823d5450"
+  integrity sha512-CxKOTtOyeeEEvS8E+PrW3C2+pBtmr+1jm1hX0nEp4ZACAsoiQ+Dcn41zIOnhpZhZV9sz6/x2KZQcRym6KsAaJA==
+  dependencies:
+    "@types/empower-core" "*"
+    "@types/power-assert-formatter" "*"
 
 "@types/google-apps-script@^0.0.39":
   version "0.0.39"
@@ -63,15 +73,22 @@
   resolved "https://registry.yarnpkg.com/@types/mocha/-/mocha-5.2.5.tgz#8a4accfc403c124a0bafe8a9fc61a05ec1032073"
   integrity sha512-lAVp+Kj54ui/vLUFxsJTMtWvZraZxum3w3Nwkble2dNuV5VnPA+Mi2oGX9XYJAaIvZi3tn3cbjS/qcJXRb6Bww==
 
+"@types/node@*":
+  version "20.9.4"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.9.4.tgz#cc8f970e869c26834bdb7ed480b30ede622d74c7"
+  integrity sha512-wmyg8HUhcn6ACjsn8oKYjkN/zUzQeNtMy44weTJSM6p4MMzEOuKbA3OjJ267uPCOW7Xex9dyrNTful8XTQYoDA==
+  dependencies:
+    undici-types "~5.26.4"
+
 "@types/power-assert-formatter@*":
-  version "1.4.28"
-  resolved "https://registry.yarnpkg.com/@types/power-assert-formatter/-/power-assert-formatter-1.4.28.tgz#25b8fddb6322259c6b91c35338d39b0f8e524252"
-  integrity sha1-Jbj922MiJZxrkcNTONObD45SQlI=
+  version "1.4.33"
+  resolved "https://registry.yarnpkg.com/@types/power-assert-formatter/-/power-assert-formatter-1.4.33.tgz#94a29c7368960d0dfe3bb88db5b16f822fa87441"
+  integrity sha512-0SiJHRbxCLyC4jnCrK1NZhtu15Ay1kmf32Dm14UC2NKF5U/XlpgMV1h9XLtxZtr9x5a1+ex+ofmjBvfGcQQJ1g==
 
 "@types/power-assert@^1.5.0":
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/@types/power-assert/-/power-assert-1.5.0.tgz#4cc43717127cd81901555f905c55f02938120dcb"
-  integrity sha512-KPoeO2vSMGOOL1g8p/d7mvTTz7SCW7RRcpavqxhFwKZoqsDd1nwPGE9QICIt50b348/9MJYuBdwjUK34Y09XJw==
+  version "1.5.12"
+  resolved "https://registry.yarnpkg.com/@types/power-assert/-/power-assert-1.5.12.tgz#f1be2150e203774ee946894562f595f179e7e255"
+  integrity sha512-dNBQIKnfnCDanT4aP2ZhY33ePEO7dGFZo+u+RPDqwvkoFwnH5GkVjo8Vb8SQ0VKlhylkEE0IgFbTirWEiHKHCw==
   dependencies:
     "@types/empower" "*"
     "@types/power-assert-formatter" "*"
@@ -2892,6 +2909,11 @@ ucfirst@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/ucfirst/-/ucfirst-1.0.0.tgz#4e105b6448d05e264ecec435e0b919363c5f2f2f"
   integrity sha1-ThBbZEjQXiZOzsQ14LkZNjxfLy8=
+
+undici-types@~5.26.4:
+  version "5.26.5"
+  resolved "https://registry.yarnpkg.com/undici-types/-/undici-types-5.26.5.tgz#bcd539893d00b56e964fd2657a4866b221a65617"
+  integrity sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==
 
 union-value@^1.0.0:
   version "1.0.0"
