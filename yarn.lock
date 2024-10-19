@@ -54,24 +54,24 @@
   integrity sha512-43wZ0609addEIVO1UcMBTCc+Eo1c0RwXPHwxd8LniIDc9SQfmhfyahpOFPQqaUDe3oS+k3MqyGc1wdoSFx3ocA==
 
 "@types/lodash@^4.14.118":
-  version "4.14.118"
-  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.118.tgz#247bab39bfcc6d910d4927c6e06cbc70ec376f27"
-  integrity sha512-iiJbKLZbhSa6FYRip/9ZDX6HXhayXLDGY2Fqws9cOkEQ6XeKfaxB0sC541mowZJueYyMnVUmmG+al5/4fCDrgw==
+  version "4.17.12"
+  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.17.12.tgz#25d71312bf66512105d71e55d42e22c36bcfc689"
+  integrity sha512-sviUmCE8AYdaF/KIHLDJBQgeYzPBI0vf/17NaYehBJfYD1j6/L95Slh07NlyK2iNyBNaEkb3En2jRt+a8y3xZQ==
 
 "@types/mocha@^5.2.5":
-  version "5.2.5"
-  resolved "https://registry.yarnpkg.com/@types/mocha/-/mocha-5.2.5.tgz#8a4accfc403c124a0bafe8a9fc61a05ec1032073"
-  integrity sha512-lAVp+Kj54ui/vLUFxsJTMtWvZraZxum3w3Nwkble2dNuV5VnPA+Mi2oGX9XYJAaIvZi3tn3cbjS/qcJXRb6Bww==
+  version "5.2.7"
+  resolved "https://registry.yarnpkg.com/@types/mocha/-/mocha-5.2.7.tgz#315d570ccb56c53452ff8638738df60726d5b6ea"
+  integrity sha512-NYrtPht0wGzhwe9+/idPaBB+TqkY9AhTvOLMkThm0IoEfLaiVQZwBwyJ5puCkO3AUCWrmcoePjp2mbFocKy4SQ==
 
 "@types/power-assert-formatter@*":
-  version "1.4.28"
-  resolved "https://registry.yarnpkg.com/@types/power-assert-formatter/-/power-assert-formatter-1.4.28.tgz#25b8fddb6322259c6b91c35338d39b0f8e524252"
-  integrity sha1-Jbj922MiJZxrkcNTONObD45SQlI=
+  version "1.4.33"
+  resolved "https://registry.yarnpkg.com/@types/power-assert-formatter/-/power-assert-formatter-1.4.33.tgz#94a29c7368960d0dfe3bb88db5b16f822fa87441"
+  integrity sha512-0SiJHRbxCLyC4jnCrK1NZhtu15Ay1kmf32Dm14UC2NKF5U/XlpgMV1h9XLtxZtr9x5a1+ex+ofmjBvfGcQQJ1g==
 
 "@types/power-assert@^1.5.0":
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/@types/power-assert/-/power-assert-1.5.0.tgz#4cc43717127cd81901555f905c55f02938120dcb"
-  integrity sha512-KPoeO2vSMGOOL1g8p/d7mvTTz7SCW7RRcpavqxhFwKZoqsDd1nwPGE9QICIt50b348/9MJYuBdwjUK34Y09XJw==
+  version "1.5.12"
+  resolved "https://registry.yarnpkg.com/@types/power-assert/-/power-assert-1.5.12.tgz#f1be2150e203774ee946894562f595f179e7e255"
+  integrity sha512-dNBQIKnfnCDanT4aP2ZhY33ePEO7dGFZo+u+RPDqwvkoFwnH5GkVjo8Vb8SQ0VKlhylkEE0IgFbTirWEiHKHCw==
   dependencies:
     "@types/empower" "*"
     "@types/power-assert-formatter" "*"
